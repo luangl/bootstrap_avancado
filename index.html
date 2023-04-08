@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <style>
+        .navbar-nav .nav-link.active{
+            color: #fff;
+        }
+
+        h1{
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        h3, h4{
+            color: #000000;
+        }
+
+        .nav-link{
+            text-align: center;
+        }
+
+        section{
+            height: 100vh;
+            padding-top: 70px;
+            margin-right: 50px;
+        }
+
+
+        img{
+            max-width: 100%;
+        }
+
+        section img{
+            max-width: 100%;
+        }
+
+
+        header{
+            position: sticky;
+            background-color: #969292;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+    .products {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    column-gap: 2%;
+    row-gap: 5%;
+    align-items: center;
+    margin-top: 30px;
+    }
+
+    .card{
+        margin-bottom: 20px;
+        margin-left: 100px;
+    }
+
+    body{
+        background-color: #ccc;
+    }
+
+    .products button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background-color: rgb(29, 0, 158);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    @media screen and (max-width: 767px) {
+
+    .products {
+        display: block;
+
+    }
+
+    .products .produto{
+        margin-bottom: 32px;
+        margin-left: 10px;
+        align-items: center;
+    }
+
+
+    header div.container {
+        flex-direction: column;
+    }
+
+    #card-dois{
+        display: none;
+    }
+
+    #card-terceiro{
+        display: none;
+    }
+    .card{
+        width: 300px;
+        margin-left: 20px;
+    }
+    
+    section{
+        width: 100%;
+        margin-right: 90px;
+    }
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    .container{
+        max-width: 98%;
+    }
+
+    .products .produto{
+        margin-left: 20px;
+    }
+
+    .destaque .produto a {
+        font-size: 1.5em;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    .products .produto{
+        margin-bottom: 32px;
+        margin-left: 35px;
+        align-items: center;
+    }
+
+    .card{
+        width: 300px;
+        margin-left: 0px;
+    }
+
+    #card-terceiro{
+        display: none;
+    }
+    
+
+}
+
+@media screen and (min-width: 1024px) {
+}
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>LU LOJA DE JOGOS</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav navbar-nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#carousel-exemplo">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="carousel-exemplo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="2000" class="carousel-item active" >
+                    <img class="d-block w-100" src="images/ps1.jpg">
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block w-100" src="images/ps2.jpg">
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img class="d-block w-100" src="images/ps3.jpg">
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="products">
+                <article class="produto">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-10">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Benefícios científicos de jogar jogos!
+                                    </div>
+                                    <img src="images/card1.jpg">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Jogar traz benefícios!</h4>
+                                        <h5 class="card-subtitle">Estudam comprovam que jogar traz coisas boas!</h5>
+                                        <p class="card-text">
+                                            Melhorando agilidade, pensamento lógico, jogos podem contribuir! 
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Leia Mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <a>
+                    <img class="ps" src="images/jogo1.jpg"/>
+                    <h3>
+                        The Last of US Part I - PS5
+                        <h4>
+                            Jogo The Last of US Part I para console Playstation 5
+                        </h4>
+                    </h3>
+                    <button type="button">Veja Mais</button>
+                </a>
+            </article>
+            <article class="produto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                            <div id="card-dois" class="card">
+                                <div class="card-header">
+                                    Tecnologia cada vez mais presente na vida dos seres humanos!
+                                </div>
+                                <img src="images/tecnologia.png">
+                                <div class="card-body">
+                                    <h4 class="card-title">A Era da tecnologia!</h4>
+                                    <h5 class="card-subtitle">Tecnologia cada vez mais avançada</h5>
+                                    <p class="card-text">
+                                        A tecnologia não para! E com ela muitos avanços muito significativos!
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Leia Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a>
+                    <img src="images/jogo3.jpg"/>
+                    <h3>
+                        Nintendo Super Mario Odyssey
+                        <h4>
+                            Jogo Super Mario Odyssey para Nintendo Switch.
+                        </h4>
+                    </h3>
+                    <button type="button">Veja Mais</button>
+                </a>
+            </article>
+            <article class="produto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10">
+                            <div id="card-terceiro" class="card">
+                                <div class="card-header">
+                                    Nova logo do EA Sports FC anunciada!
+                                </div>
+                                <img src="images/ea.png">
+                                <div class="card-body">
+                                    <h4 class="card-title">Mudanças no FIFA</h4>
+                                    <h5 class="card-subtitle">Depois de acordo,FIFA muda nome para EA Sports FC</h5>
+                                    <p class="card-text">
+                                        EA muda o nome do jogo para EA Sports FC e anuncia a nova logo!
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Leia Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a>
+                    <img class="nintendo" src="images/jogo8.png"/>
+                    <h3>
+                        Forza Horizon 5 - Xbox Series X
+                        <h4>
+                            Jogo Forza Horizon 5 para console Xbox Series X
+                        </h4>
+                    </h3>
+                    <button type="button">Veja Mais</button>
+                </a>
+            </article>
+            <article class="produto">
+                <a>
+                    <img src="images/jogo7.png"/>
+                    <h3>
+                        God of War - Ragnarok
+                        <h4>
+                            Jogo God of War - Ragnarok para Playstation 5
+                        </h4>
+                    </h3>
+                    <button type="button">Veja Mais</button>
+                </a>
+            </article>
+            <article class="produto">
+                <a>
+                    <img src="images/jogo6.jpg"/>
+                    <h3>
+                        Super Mario Maker 2
+                        <h4>
+                            Jogo Super Mario Maker 2 para Nintendo Switch
+                        </h4>
+                    </h3>
+                    <button type="button">Veja Mais</button>
+                </a>
+            </article>
+            <article class="produto">
+                <a>
+                    <img src="images/jogo5.png"/>
+                    <h3>
+                        Grand Theft Auto V 
+                        <h4>
+                            Jogo GTA V para console Xbox Series X, compativel com Xbox Series S
+                        </h4>
+                    </h3>
+                    <button type="button">Veja Mais</button>
+                </a>
+            </article>
+        </section>
+    </div>
+    
+    <script src="lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
